@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #535657;
+    padding: 3rem;
+}
+
+a, a:visited, a:active {
+    color: rebeccapurple;
+    text-decoration: none;
+    
+}
+
+.container {    
+    background-color: #f4faff;
+}
+
+.header {
+    background-color: rgb(196, 187, 215);
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+
+.heading-div {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.main-heading {
+    text-transform: uppercase;
+}
+
+.name {
+    display: block;
+    letter-spacing: 1.8rem;
+    font-weight: 900;
+    font-size: 4rem;
+    
+    animation-name: leftMove;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.job-title {
+    display: block;
+    letter-spacing: 0.8rem;
+    font-size: 1.8rem; 
+    
+    animation-name: rightMove;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.image-div {
+    padding: 3rem 0px 3rem 0px;
+}
+
+.filip-image {
+    width: 26rem;
+    border-radius: 50%;
+    
+    animation-name: appear;
+    animation-duration: 1.1s; 
+    animation-timing-function: ease-in;
+}
+
+.fa {    
+    padding: 0rem 2rem 0rem 2rem;
+}
+
+.clip-div, .clip-div2 {
+    height: 3rem;
+    background-color: rgb(196, 187, 215);
+    border: 1px solid rgb(196, 187, 215);
+}
+
+.clip-div {
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.clip-div2 {
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 100%);
+    margin-top: -2rem;
+}
+
+
+.bio-box, .project-box {
+    background-color: rgb(196, 187, 215);
+    text-align: center;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+}
+
+.bio-title {
+    text-decoration: underline;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.bio-text {
+    padding: 1rem 15rem 0rem 15rem;
+    font-style: italic;
+}
+
+.project-div {
+    overflow: hidden;
+    padding-left: 15rem;
+}
+
+.project-image {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+.project-image:hover {
+    opacity: 0.85;
+}
+
+.img-div {
+    float: left;
+    margin: 2rem 3rem 0rem 1.9rem;
+}
+
+.paragraph-div {
+    float: left;
+    width: 64rem;
+    margin-top: 2rem;
+    border-radius: 2.5rem;
+}
+
+.project-title {
+    font-size: 2.4rem;
+}
+
+.project-description {
+    text-align: left
+}
+
+.footer {
+   text-align: center; 
+}
+
+@keyframes leftMove {
+    0% {
+        opacity: 0;
+        transform: translateX(-30rem);
+    }
+    
+    80% {
+        transform: translateX(2rem);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+   
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rightMove {
+    0% {
+        opacity: 0;
+        transform: translateX(30rem);
+    }
+    
+    80% {
+        transform: translateX(-2rem);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width:770px) {
+    
+    html {
+        font-size: 9px;
+    }
+    
+    .bio-text {
+        padding: 1rem 10rem 0rem 10rem;
+    }
+    
+    .project-div {
+        padding-left: 5rem;
+    }
+
+    .paragraph-div {
+        width: 44rem;
+    }
+}
+
+@media screen and (max-width:680px) {
+    
+    html {
+        font-size: 7px;
+    }
+    
+    .bio-text {
+        padding: 1rem 8rem 0rem 8rem;
+    }
+
+    .paragraph-div {
+        width: 48rem;
+    }   
+}
+
+@media screen and (max-width:426px) {
+    
+    html {
+        font-size: 5px;
+    }
+    
+    .bio-text {
+        padding: 1rem 7rem 0rem 7rem;
+    }
+
+    .paragraph-div {
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width:376px) {
+    
+    html {
+        font-size: 4px;
+    }
+
+    .paragraph-div {
+        width: 48rem;
+    }
+}
