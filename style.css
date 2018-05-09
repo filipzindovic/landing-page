@@ -9,29 +9,26 @@ html {
 }
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: 'Chau Philomene One', sans-serif;
+    text-shadow: 3px 3px 1px rgba(150, 150, 150, 1);
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.7;
-    color: #535657;
-    padding: 3rem;
+    color: black;
+    padding: 3vh 2vw 3vh 2vw;
+    background-color: azure;
 }
 
-a, a:visited, a:active {
-    color: rebeccapurple;
+a, a:hover, a:visited, a:active {
+    color: white;
     text-decoration: none;
-    
+    cursor: pointer;
+    text-shadow: 1px 1px 1px rgba(150, 150, 150, 1); 
 }
 
-.container {    
-    background-color: #f4faff;
-}
-
-.header {
-    background-color: rgb(196, 187, 215);
-    background-position: center;
-    position: relative;
-    text-align: center;
+.container {
+    background-image: linear-gradient(to bottom right, #B3B3B3, #FFD75A);
+    width: 96vw;
 }
 
 .heading-div {
@@ -45,9 +42,10 @@ a, a:visited, a:active {
 
 .name {
     display: block;
-    letter-spacing: 1.8rem;
+    letter-spacing: 2.5rem;
     font-weight: 900;
     font-size: 4rem;
+    text-shadow: none;
     
     animation-name: leftMove;
     animation-duration: 1s;
@@ -57,7 +55,8 @@ a, a:visited, a:active {
 .job-title {
     display: block;
     letter-spacing: 0.8rem;
-    font-size: 1.8rem; 
+    font-size: 2.1rem;
+    text-shadow: none; 
     
     animation-name: rightMove;
     animation-duration: 1s;
@@ -71,52 +70,95 @@ a, a:visited, a:active {
 .filip-image {
     width: 26rem;
     border-radius: 50%;
+    border: 7px solid black;
     
     animation-name: appear;
     animation-duration: 1.1s; 
     animation-timing-function: ease-in;
 }
 
+.button-btn {
+    font-family: 'Chau Philomene One', sans-serif;
+    color: inherit;
+    background-color: inherit;
+    border: none;
+    font-size: 350%;
+    text-shadow: 3px 3px 1px rgba(150, 150, 150, 1); 
+    cursor: pointer;
+    
+    animation-name: appear;
+    animation-duration: 1.1s; 
+    animation-timing-function: ease-in;
+}
+
+.link-icons {
+    padding-bottom: 2.8vh;
+}
+
 .fa {    
     padding: 0rem 2rem 0rem 2rem;
+    color: black;
 }
 
-.clip-div, .clip-div2 {
-    height: 3rem;
-    background-color: rgb(196, 187, 215);
-    border: 1px solid rgb(196, 187, 215);
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    background-color: #171717;
+    overflow-x: hidden;
+    transition: 1.1s;
 }
 
-.clip-div {
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
+.overlay2 {
+    bottom: none;
+    right: none;
+    top: 0;
+    left: 0;
+    background-color: #171717;
 }
 
-.clip-div2 {
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 100%);
-    margin-top: -2rem;
-}
-
-
-.bio-box, .project-box {
-    background-color: rgb(196, 187, 215);
+.overlay-content {
+    position: relative;
+    top: 2%;
     text-align: center;
-    padding: 1.5rem 0rem 1.5rem 0rem;
 }
 
-.bio-title {
-    text-decoration: underline;
-    font-size: 2.5rem;
-    font-weight: 900;
+.overlay a:hover, .overlay a:focus {
+    color: azure;
 }
 
-.bio-text {
-    padding: 1rem 15rem 0rem 15rem;
-    font-style: italic;
+.overlay .closebtn {
+    position: absolute;
+    right: 25px;
+    font-size: 30px;
+}
+
+#bio-text {
+    font-size: 18px;
+    color: white;
+    margin: 2% 12% 0% 12%;
+    transition-delay: 1s;
+    text-shadow: none;
+    visibility: hidden;
+}
+
+.project-box {
+    text-align: center;
+    margin-top: 5vh;
+    font-family: 'Signika', sans-serif;
+    text-shadow: none;
+    font-weight: 100;
+    visibility: hidden;
+    transition-delay: 1.1s;
 }
 
 .project-div {
     overflow: hidden;
     padding-left: 15rem;
+    color: white;
 }
 
 .project-image {
@@ -129,6 +171,10 @@ a, a:visited, a:active {
     opacity: 0.85;
 }
 
+#project-6 {
+    padding-bottom: 10px;
+}
+
 .img-div {
     float: left;
     margin: 2rem 3rem 0rem 1.9rem;
@@ -139,28 +185,32 @@ a, a:visited, a:active {
     width: 64rem;
     margin-top: 2rem;
     border-radius: 2.5rem;
+    
 }
 
 .project-title {
     font-size: 2.4rem;
+    letter-spacing: 1.1px;
 }
 
 .project-description {
     text-align: left
 }
 
-.footer {
-   text-align: center; 
+.last-div {
+    margin-top: 7vh;
 }
+
+
 
 @keyframes leftMove {
     0% {
         opacity: 0;
-        transform: translateX(-30rem);
+        transform: translateX(-2rem);
     }
     
     80% {
-        transform: translateX(2rem);
+        transform: translateX(1rem);
     }
     
     100% {
@@ -182,11 +232,11 @@ a, a:visited, a:active {
 @keyframes rightMove {
     0% {
         opacity: 0;
-        transform: translateX(30rem);
+        transform: translateX(2rem);
     }
     
     80% {
-        transform: translateX(-2rem);
+        transform: translateX(-1rem);
     }
     
     100% {
@@ -201,10 +251,6 @@ a, a:visited, a:active {
         font-size: 9px;
     }
     
-    .bio-text {
-        padding: 1rem 10rem 0rem 10rem;
-    }
-    
     .project-div {
         padding-left: 5rem;
     }
@@ -212,16 +258,37 @@ a, a:visited, a:active {
     .paragraph-div {
         width: 44rem;
     }
+    
+    .landscape-phone {
+        width: 50%;
+    }
+    
+    .heading-div {
+        margin-top: 10vh;
+    }
+    
+    .filip-image { 
+        border: 4px solid black;
+    }
+    
+    .link-icons {
+        margin-top: -3vh;
+        padding-bottom: 3vh;
+    }
+    
+    .job-title {
+        padding: 3px;
+    }
+    
+    #bio-text {
+        margin: 6% 12% 0% 12% !important;
+    }
 }
 
 @media screen and (max-width:680px) {
     
     html {
         font-size: 7px;
-    }
-    
-    .bio-text {
-        padding: 1rem 8rem 0rem 8rem;
     }
 
     .paragraph-div {
@@ -235,13 +302,48 @@ a, a:visited, a:active {
         font-size: 5px;
     }
     
-    .bio-text {
-        padding: 1rem 7rem 0rem 7rem;
-    }
 
     .paragraph-div {
         width: 40rem;
     }
+    
+    .landscape-phone {
+        width: 100%;
+    }
+    
+    .heading-div {
+        margin-top: 1vh;
+    }
+    
+    .name {
+        font-size: 6rem;
+    }
+    
+    .job-title {
+        padding: 5px;
+        font-size: 3.2rem;
+    }
+    
+    .image-div {
+        padding: 5rem 0px 5rem 0px;
+    }
+    
+    .filip-image { 
+        border: 3px solid black;
+        width: 41rem;
+    }
+    
+    .button-btn {
+        font-size: 8rem !important;
+        margin-top: 5vh;
+    }
+    
+    .link-icons {
+        margin-top: 0vh;
+        font-size: 3.3rem;
+        padding-bottom: 9vh;
+    }
+    
 }
 
 @media screen and (max-width:376px) {
